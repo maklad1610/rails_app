@@ -1,0 +1,8 @@
+{
+  "name": "ruby_app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/maklad1610/ruby_app.git",
+  "author": "Fares Makled <faresmohammed1610@gmail.com>",
+  "license": "MIT"
+}
