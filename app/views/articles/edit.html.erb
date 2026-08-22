@@ -1,7 +1,7 @@
-<h1>Create A New Article</h1>
+<h1>Edit Article</h1>
 
 <% if @article.errors.any? %>
-    <h2> The Following Errors Prevented The Article From Being Saved :</h2>
+    <h2> The Following Errors Prevented The Article From Being Edited :</h2>
     <ul>
         <% @article.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -9,7 +9,7 @@
     </ul>    
 <% end %>
 
-<%= form_with scope: :article, url: articles_path, data: { turbo: false }, local: true do |f| %>
+<%= form_with(model: @article ,local: true,data: { turbo: false }) do |f| %>
 
     <p>
         <%= f.label :title %><br/>
