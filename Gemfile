@@ -63,5 +63,5 @@ group :test do
 end
 
 gem "byebug"
-gem 'bootstrap', '~> 4.4.1'
+gem 'bootstrap', '~> 5.3.8'
 gem 'jquery-rails'
