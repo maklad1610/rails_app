@@ -63,3 +63,5 @@ group :test do
 end
 
 gem "byebug"
+
+gem "cssbundling-rails", "~> 1.4"
