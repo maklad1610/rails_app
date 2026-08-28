@@ -1,18 +1,9 @@
 <div class="container">
-  <% if @article.errors.any? %>
-    <h2>The Following Errors Prevented The Article From Being Saved:</h2>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-  <% end %>
-
   <div class="row justify-content-center">
     <div class="col-10">
+      <%= render 'shared/errors'%>
 
-
-  <%= form_with(model: @article, class: "bg-secondary shadow-lg p-4 rounded", local: true, data: { turbo: false }) do |f| %>
+  <%= form_with(model: @article, class: "bg-secondary shadow-lg p-3 mb-5 rounded", local: true, data: { turbo: false }) do |f| %>
 
     <div class="row mb-3">
       <%= f.label :title, class: "col-2 col-form-label text-light" %>
