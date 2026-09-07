@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+    def index
+        @users = User.all
+    end
 
     def show
         @user = User.find(params[:id])
@@ -12,7 +15,7 @@ class UsersController < ApplicationController
     def edit
         @user = User.find(params[:id])
     end
-    
+
     def update
         @user = User.find(params[:id])
         if @user.update(user_params)
@@ -20,7 +23,7 @@ class UsersController < ApplicationController
             redirect_to articles_path
         else
             render "edit"
-        end    
+        end
     end
 
     def create
@@ -29,8 +32,8 @@ class UsersController < ApplicationController
             flash[:notice] = "Welcome to the Alpha Blog #{@user.username}, you have successfully signed up"
             redirect_to articles_path
         else
-            render "new" 
-        end       
+            render "new"
+        end
     end
 
     private
